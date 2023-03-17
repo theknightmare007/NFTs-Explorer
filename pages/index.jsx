@@ -57,14 +57,14 @@ const fetchNFTsForCollection = async () => {
         <input onChange={(e)=>{setWalletAddress(e.target.value)}} value={wallet} type={"text"} placeholder="Input wallet address here"></input>
         <input onChange ={(e)=>{setCollectionAddress(e.target.value)}} value={collection} type={"text"} placeholder="NFT collection address (optional)"></input>
         <label><input onChange={(e)=>setFetchForCollection(e.target.checked)} type={"Checkbox"}></input>Fetch for collection</label>
-        <button onClick={
-          () => {
-            if (fetchForCollection) {
-              fetchNFTs();
-              fetchNFTsForCollection();
-            } else fetchNFTs();
-          }
-        }>Search for NFTs</button>
+        <button
+  style={{ backgroundColor: 'orange' }}
+  onClick={() => {
+    if (fetchForCollection) {
+      fetchNFTs();
+      fetchNFTsForCollection();
+    } else fetchNFTs();
+  }}>Search for NFTs</button>
       </div>
       <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
         {
