@@ -68,7 +68,7 @@ const fetchNFTsForCollection = async () => {
       </div>
       <div className='flex flex-wrap gap-y-12 mt-4 w-5/6 gap-x-2 justify-center'>
         {
-          NFTs.map(nft => {
+           NFTs.map(nft => {
             return (
               <NFTCard nft={nft}></NFTCard>)
           })
